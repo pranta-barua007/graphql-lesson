@@ -20,7 +20,7 @@ const GET_COLLECTIONS_BY_TITLE = gql`
 `;
 
 const CollectionPageContainer = ({ match }) => {
-  const { loading, error, data } = useQuery(GET_COLLECTIONS_BY_TITLE, {
+  const { loading, data } = useQuery(GET_COLLECTIONS_BY_TITLE, {
     variables: { title: match.params.collectionId },
   });
   const { getCollectionsByTitle } = data;

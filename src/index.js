@@ -26,12 +26,6 @@ const client = new ApolloClient({
   cache: cache,
 });
 
-// client.writeQuery({
-//   data: {
-//     cartHidden: true,
-//   },
-// });
-
 
 ReactDOM.render(
   <ApolloProvider client={client}>
