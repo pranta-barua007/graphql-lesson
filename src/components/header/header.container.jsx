@@ -5,14 +5,14 @@ import Header from './header.component';
 
 const GET_CART_HIDDEN = gql`
     {
-        cart @client
+        cartHidden @client
     }
 `;
 
 const HeaderContainer = () => {
     const { data } = useQuery(GET_CART_HIDDEN);
     return (
-        <Header hidden={data.cart.hidden} />
+        <Header hidden={data.cartHidden} />
     )
 };
 

@@ -1,9 +1,17 @@
-// import { cache } from "../cache";
 import { makeVar } from "@apollo/client";
 
-const cartDropdownInitialValues = {
-  hidden: true,
-  cartItems: [],
-};
+export const cartHiddenVar = makeVar(false);
+export const cartItemsVar = makeVar([]);
 
-export const cartVar = makeVar(cartDropdownInitialValues);
+export const cartReactiveVars = {
+  cartHidden: {
+    read() {
+      return cartHiddenVar();
+    },
+  },
+  cartItems: {
+    read() {
+      return cartItemsVar();
+    },
+  },
+}
