@@ -7,7 +7,7 @@ export const toggleCartHidden = () => {
     return !hidden;
 };
 
-export const addItemToCart = (item) => {
+export const addItemToCart = (item) => { //TODO: Functionality not working
     const cartItems  = cartItemsVar();
     console.log({cartItems});
     const newCartItems = addItem(cartItems, item);
