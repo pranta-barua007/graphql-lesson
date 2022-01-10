@@ -12,6 +12,7 @@ const GET_CART_ITEMS = gql`
 
 const CartDropdownContainer = () => {
     const { loading, data } = useQuery(GET_CART_ITEMS);
+    console.log({data}, 'cart dropdown')
     if (loading) return <Spinner />
     return (
         <CartDropdown 
