@@ -20,12 +20,13 @@ const GET_COLLECTIONS_BY_TITLE = gql`
 `;
 
 const CollectionPageContainer = ({ match }) => {
-  const { loading, data } = useQuery(GET_COLLECTIONS_BY_TITLE, {
+  const { loading, data, error } = useQuery(GET_COLLECTIONS_BY_TITLE, {
     variables: { title: match.params.collectionId },
   });
-  const { getCollectionsByTitle } = data;
+
   if (loading) return <Spinner />;
-  return <CollectionPage collection={getCollectionsByTitle} />;
+  if (error) return <p>{error}</p>
+  return <CollectionPage collection={data.getCollectionsByTitle} />;
 };
 
 export default CollectionPageContainer;

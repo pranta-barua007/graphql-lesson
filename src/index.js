@@ -6,10 +6,9 @@ import { PersistGate } from "redux-persist/integration/react";
 import {
   ApolloClient,
   createHttpLink,
-  InMemoryCache,
   ApolloProvider,
 } from "@apollo/client";
-
+import { cache } from "./apollo-client/cache";
 import { store, persistor } from "./redux/store";
 
 import "./index.css";
@@ -19,13 +18,10 @@ const httpLink = createHttpLink({
   uri: "https://crwn-clothing.com",
 });
 
-const cache = new InMemoryCache();
-
 const client = new ApolloClient({
   link: httpLink,
   cache: cache,
 });
-
 
 ReactDOM.render(
   <ApolloProvider client={client}>
