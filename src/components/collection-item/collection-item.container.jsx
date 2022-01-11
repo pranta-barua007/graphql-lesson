@@ -1,12 +1,13 @@
 import React from "react";
-import { addItemToCart } from "../../apollo-client/cart/cart.mutations";
 import CollectionItem from "./collection-item.component";
+import { addItemToCart } from "../../apollo-client/cart/cart.mutations";
 
 const CollectionItemContainer = (props) => {
+    // console.log({props})
     return (
         <CollectionItem 
-            {...props} 
-            addItem={addItemToCart} 
+            addItemToCart={addItemToCart} 
+            {...props}
         /> 
     )
 };
