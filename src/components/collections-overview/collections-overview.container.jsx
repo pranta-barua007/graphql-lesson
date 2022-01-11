@@ -1,7 +1,5 @@
 import React from "react";
 import { useQuery, gql } from "@apollo/client";
-
-
 import CollectionsOverview from "./collections-overview.component";
 import Spinner from "../spinner/spinner.component";
 
