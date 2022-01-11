@@ -1,5 +1,5 @@
 import React from "react";
-import { toggleCartHidden } from "../../apollo-client/cart/cart.operations";
+import { toggleCartHidden } from "../../apollo-client/cart/cart.mutations";
 
 import CartIcon from './cart-icon.component';
 

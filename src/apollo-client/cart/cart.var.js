@@ -1,6 +1,6 @@
 import { makeVar } from "@apollo/client";
 
-export const cartHiddenVar = makeVar(false);
+export const cartHiddenVar = makeVar(true);
 export const cartItemsVar = makeVar([]);
 
 export const cartReactiveVars = {

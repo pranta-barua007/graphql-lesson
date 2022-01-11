@@ -1,5 +1,5 @@
 import React from "react";
-import { addItemToCart } from "../../apollo-client/cart/cart.operations";
+import { addItemToCart } from "../../apollo-client/cart/cart.mutations";
 import CollectionItem from "./collection-item.component";
 
 const CollectionItemContainer = (props) => {

@@ -2,7 +2,7 @@ import React from "react";
 import Spinner from "../spinner/spinner.component";
 import CartDropdown from "./cart-dropdown.component";
 import { useQuery, gql } from "@apollo/client";
-import { toggleCartHidden } from "../../apollo-client/cart/cart.operations";
+import { toggleCartHidden } from "../../apollo-client/cart/cart.mutations";
 
 const GET_CART_ITEMS = gql`
     {
