@@ -6,7 +6,7 @@ import './collection-item.styles.scss';
 
 const CollectionItem = ({ item, addItemToCart }) => {
   const { name, price, imageUrl } = item;
-  console.log(addItemToCart, 'addItem')
+
   return (
     <div className='collection-item'>
       <div

@@ -8,7 +8,6 @@ export const toggleCartHidden = () => {
 
 export const addItemToCart = (item) => {
     const cartItems  = cartItemsVar();
-    console.log({item})
     const newCartItems = addItem(cartItems, item);
     const cartItemCount = getCartItemCount(newCartItems);
     cartItemCountVar(cartItemCount);

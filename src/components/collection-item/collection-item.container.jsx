@@ -3,7 +3,6 @@ import CollectionItem from "./collection-item.component";
 import { addItemToCart } from "../../apollo-client/cart/cart.mutations";
 
 const CollectionItemContainer = (props) => {
-    // console.log({props})
     return (
         <CollectionItem 
             addItemToCart={addItemToCart} 
