@@ -13,3 +13,11 @@ export const addItem = (cartItems, cartItemToAdd) => {
 
   return [...cartItems, { ...cartItemToAdd, quantity: 1 }];
 };
+
+export const getCartItemCount = (cartItems) => {
+  return cartItems.reduce(
+    (accumalatedQuantity, cartItem) =>
+      accumalatedQuantity + cartItem.quantity,
+    0
+  )
+}
