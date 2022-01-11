@@ -3,6 +3,7 @@ import { makeVar } from "@apollo/client";
 export const cartHiddenVar = makeVar(true);
 export const cartItemsVar = makeVar([]);
 export const cartItemCountVar = makeVar(0);
+export const cartItemsTotalVar = makeVar(0);
 
 export const cartReactiveVars = {
   cartHidden: {
@@ -18,6 +19,11 @@ export const cartReactiveVars = {
   cartItemCount: {
     read() {
       return cartItemCountVar();
+    },
+  },
+  cartItemsTotal: {
+    read() {
+      return cartItemsTotalVar();
     },
   },
 }

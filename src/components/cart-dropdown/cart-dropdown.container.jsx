@@ -1,17 +1,12 @@
 import React from "react";
 import CartDropdown from "./cart-dropdown.component";
-import { useQuery, gql } from "@apollo/client";
+import { useQuery } from "@apollo/client";
+import { GET_CART_ITEMS } from "../../apollo-client/cart/cart.queries";
 import { toggleCartHidden } from "../../apollo-client/cart/cart.mutations";
-
-const GET_CART_ITEMS = gql`
-    {
-        cartItems @client 
-    }
-`;
 
 const CartDropdownContainer = () => {
     const { data } = useQuery(GET_CART_ITEMS);
-
+    
     return (
         <CartDropdown 
             cartItems={data.cartItems}

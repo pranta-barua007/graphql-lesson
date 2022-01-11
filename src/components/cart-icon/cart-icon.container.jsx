@@ -1,14 +1,8 @@
 import React from "react";
-import { gql, useQuery } from "@apollo/client";
-import { toggleCartHidden } from "../../apollo-client/cart/cart.mutations";
-
 import CartIcon from './cart-icon.component';
-
-const GET_CART_ITEM_COUNT = gql`
-    {
-        cartItemCount @client
-    }
-`
+import { useQuery } from "@apollo/client";
+import { GET_CART_ITEM_COUNT } from "../../apollo-client/cart/cart.queries";
+import { toggleCartHidden } from "../../apollo-client/cart/cart.mutations";
 
 const CartIconContainer = () => {
     const { data } = useQuery(GET_CART_ITEM_COUNT);
