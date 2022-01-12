@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import { auth } from '../../firebase/firebase.utils';
+
 import CartIconContainer from '../cart-icon/cart-icon.container';
 import CartDropdownContainer from '../cart-dropdown/cart-dropdown.container';
 
