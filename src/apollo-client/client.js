@@ -12,5 +12,6 @@ const httpLink = createHttpLink({
 export const apolloClient = new ApolloClient({
     link: httpLink,
     cache: cache,
-    typeDefs
+    typeDefs,
+    connectToDevTools: true
 });
