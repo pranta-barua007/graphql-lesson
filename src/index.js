@@ -10,7 +10,7 @@ import { apolloClient } from "./apollo-client/client";
 import { store, persistor } from "./redux/store";
 
 import "./index.css";
-import App from "./App";
+import { default as App } from './App/App.container';
 
 ReactDOM.render(
   <ApolloProvider client={apolloClient}>
