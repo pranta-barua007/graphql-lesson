@@ -1,16 +1,20 @@
 import React from "react";
 import Header from './header.component';
-import { useQuery } from "@apollo/client";
-import { GET_CART_HIDDEN } from "../../apollo-client/cart/cart.queries";
-import { GET_CURRENT_USER } from "../../apollo-client/user/user.queries";
+import { gql, useQuery } from "@apollo/client";
+
+const GET_CART_HIDDEN_AND_CURRENT_USER = gql`
+    query getCartHiddenAndCurrentUser{
+        cartHidden @client
+        currentUser @client
+    }
+`;
 
 const HeaderContainer = () => {
-    const { data } = useQuery(GET_CART_HIDDEN);
-    const user = useQuery(GET_CURRENT_USER);
+    const { data } = useQuery(GET_CART_HIDDEN_AND_CURRENT_USER);
     
     return (
         <Header 
-            currentUser={user.data.currentUser}
+            currentUser={data.currentUser}
             hidden={data.cartHidden} 
         />
     )
