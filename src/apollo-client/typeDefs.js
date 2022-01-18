@@ -3,7 +3,7 @@ import { gql } from '@apollo/client';
 //Still not sure how type defs works
 export const typeDefs = gql`
     extend type Query {
-        cartHidden: Boolean!
+        getCartHidden: Boolean!
         cartItems: [Item]!
         cartItemsTotal: Number!
         cartItemCount: Number!
@@ -15,7 +15,7 @@ export const typeDefs = gql`
         quantity: Int
     }
 
-    extend type Section {
+    type Section {
         id: ID!
         title: String!
         imageUrl: String!
