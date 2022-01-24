@@ -1,6 +1,6 @@
 import React from "react";
 import CheckoutItem from "./checkout-item.component";
-import { addItemToCart, removeItemFromCart, clearItemFromCart } from "../../apollo-client/cart/cart.mutations";
+import { addItemToCart, removeItemFromCart, clearItemFromCart } from "../../client/cart/cart.mutations";
 
 const CheckoutItemContainer = (props) => {
     return (
